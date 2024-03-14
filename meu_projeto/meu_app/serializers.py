@@ -1,7 +1,8 @@
+# serializers.py
 from rest_framework import serializers
-from .models import Produto
+from .models import Dados
 
-class ProdutoSerializer(serializers.ModelSerializer):
+class DadosSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Produto
+        model = Dados
         fields = '__all__'

@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import DadosAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+# urls.py
 
+
+urlpatterns = [
+    path('dados/', DadosAPIView.as_view(), name='dados-api'),
+]
