@@ -1,7 +1,5 @@
-from rest_framework import generics
-from .models import Produto
-from .serializers import ProdutoSerializer
+# views.py
+from django.shortcuts import render
 
-class ProdutoListCreate(generics.ListCreateAPIView):
-    queryset = Produto.objects.all()
-    serializer_class = ProdutoSerializer
+def index(request):
+    return render(request, 'index.html')
